@@ -19,6 +19,14 @@ Do the following:
 */
 
 
+let votingAge = 25;
+if (votingAge >= 18){
+  console.log('true');
+  return true;
+}
+
+
+
 
 /*
 Task 1b - Values
@@ -30,6 +38,18 @@ Do the following:
 
    HINT: no function required
 */
+
+let variableOne = 2
+let variableTwo = 6
+
+if (variableTwo === 6){
+  variableOne = 3
+
+}
+else{
+  variableOne = 7
+}
+
 
 
 
@@ -46,7 +66,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let string = '1999';
+Number(string);
 
 
 /*
@@ -58,10 +79,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
-
+console.log(multiply(5, 4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,9 +95,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+
+function dogYears(humanYears){
+    return humanYears * 7
 }
+
+
 
 
 
@@ -107,7 +131,7 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog( ){
     /*add your code here*/
   }
 
@@ -127,10 +151,42 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
-}
+// function game(any){
+//     /*add your code here*/
+// }
   
+function game(usersChoice/*add your code here*/){
+  /*add your code here*/
+  let computersChoice = Math.random();
+  if(computersChoice <= 0.333){
+    computersChoice = "rock";
+  }else if(computersChoice > 0.333 && computersChoice <0.667){
+    computersChoice = "scissors";
+  }else {
+    computersChoice = "paper";
+  }
+  let result;
+  if(usersChoice === "rock" && computersChoice === "rock"){
+    result = "it's a tie";
+  }else if(usersChoice === "rock" && computersChoice === "scissors"){
+    result = "you win!";
+  }else if(usersChoice === "rock" && computersChoice === "paper"){
+    result = "you lose!"
+  }else if(usersChoice === "scissors" && computersChoice === "rock"){
+    result = "you lose!!";
+  }else if(usersChoice === "scissors" && (computersChoice === "scissors")){
+    result = "it's a tie";
+  }else if(usersChoice === "scissors" && computersChoice === "paper"){
+    result = "you win!"
+  }else if(usersChoice === "paper" && computersChoice === "rock"){
+    result = "you win!";
+  }else if(usersChoice === "paper" && computersChoice === "scissors"){
+    result = "you lose!";
+  }else if(usersChoice === "paper" && computersChoice === "paper"){
+    result = "it's a tie"
+  }
+  return result;
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -194,10 +250,38 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
-  
+//   function grade(grade){
+//     if(grade>= 90){
+//       console.log("A");
+//   }
+//   else if(grade <90 && grade>=80){
+//       console.log("B");
+//   }
+//   else if(grade<80 && grade>=70){
+//       console.log("C");
+//   }
+//   else if(grade<70 && grade>=60){
+//       console.log("D");
+//   }
+//   else if(grade<60){
+//       console.log("F");
+//   }
+// }
+
+let grade = 92;
+function grade(score){
+  if (score >= 90) {
+    return "A";
+} else if (score >= 80) {
+    return "B";
+} else if (score >= 70) {
+    return "C";
+} else if (score >= 60) {
+    return "D";
+} else
+    return "F";
+}
+}
   
   
   
