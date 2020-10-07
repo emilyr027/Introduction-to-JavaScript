@@ -44,7 +44,6 @@ let variableTwo = 6
 
 if (variableTwo === 6){
   variableOne = 3
-
 }
 else{
   variableOne = 7
@@ -131,9 +130,25 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog( ){
-    /*add your code here*/
+function hungryDog(pounds, years){
+    if (years >= 1 && pounds <= 5) {
+      return pounds * 0.05;
+    } else if (pounds <= 10) {
+      return pounds * 0.04;
+    } else if (pounds <= 15) {
+      return pounds * 0.03;
+    } else if (pounds > 15) {
+      return pounds * 0.02;
+    } 
+    if (years <= 4/12) {
+      return pounds * 0.10;
+    } else if (years <= 7/12) {
+      return pounds * 0.05;
+    } else if (years < 1) {
+      return pounds * 0.04;
+    }
   }
+  console.log(hungryDog(10, 1));
 
 
 
@@ -155,37 +170,23 @@ Use the game function below to do the following:
 //     /*add your code here*/
 // }
   
-function game(usersChoice/*add your code here*/){
-  /*add your code here*/
-  let computersChoice = Math.random();
-  if(computersChoice <= 0.333){
-    computersChoice = "rock";
-  }else if(computersChoice > 0.333 && computersChoice <0.667){
-    computersChoice = "scissors";
-  }else {
-    computersChoice = "paper";
+function rockPaperScissors(yourMove) {
+  var computerMove = Math.ceil(Math.random()*3);
+  if(computerMove === 1) {
+    computerMove = rock;
+  } else if(computerMove === 2) {
+    computerMove = paper;
+  } else {
+    computerMove = scissors;
   }
-  let result;
-  if(usersChoice === "rock" && computersChoice === "rock"){
-    result = "it's a tie";
-  }else if(usersChoice === "rock" && computersChoice === "scissors"){
-    result = "you win!";
-  }else if(usersChoice === "rock" && computersChoice === "paper"){
-    result = "you lose!"
-  }else if(usersChoice === "scissors" && computersChoice === "rock"){
-    result = "you lose!!";
-  }else if(usersChoice === "scissors" && (computersChoice === "scissors")){
-    result = "it's a tie";
-  }else if(usersChoice === "scissors" && computersChoice === "paper"){
-    result = "you win!"
-  }else if(usersChoice === "paper" && computersChoice === "rock"){
-    result = "you win!";
-  }else if(usersChoice === "paper" && computersChoice === "scissors"){
-    result = "you lose!";
-  }else if(usersChoice === "paper" && computersChoice === "paper"){
-    result = "it's a tie"
+  if(yourMove === computerMove){
+    return "it's a tie";
+  } else if((yourMove === rock) && (computerMove === scissors) || ((yourMove === paper) && (computerMove === rock)) || ((yourMove === scissors) && (computerMove === paper))) {
+    return "you win!";
+  } else {
+    return "you lose!";
   }
-  return result;
+}
 
   
 
@@ -199,9 +200,10 @@ Using the miles function below do the following:
   2. Convert the number of kiolmeters received to miles
   3. Return the number of miles
 */
+//1 km = 0.6214 miles
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return kilometers * 0.6214;
   }
 
 
@@ -214,8 +216,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+//1 ft = 30.48 cm
+
+function feet(centimeters){
+    return centimeters / 30.48;
   }
  
 
@@ -249,26 +253,9 @@ Using the grade function below do the following:
    60-69 =  D 
    below 60 = F
 */
-  
-//   function grade(grade){
-//     if(grade>= 90){
-//       console.log("A");
-//   }
-//   else if(grade <90 && grade>=80){
-//       console.log("B");
-//   }
-//   else if(grade<80 && grade>=70){
-//       console.log("C");
-//   }
-//   else if(grade<70 && grade>=60){
-//       console.log("D");
-//   }
-//   else if(grade<60){
-//       console.log("F");
-//   }
-// }
 
-let grade = 92;
+
+let test = 92;
 function grade(score){
   if (score >= 90) {
     return "A";
@@ -278,10 +265,13 @@ function grade(score){
     return "C";
 } else if (score >= 60) {
     return "D";
-} else
-    return "F";
+} else {
+  return "F";
 }
-}
+}  
+console.log(grade(92));
+
+
   
   
   
