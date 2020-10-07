@@ -19,11 +19,12 @@ Do the following:
 */
 
 
-let votingAge = 25;
-if (votingAge >= 18){
-  console.log('true');
-  return true;
-}
+// let votingAge = 25;
+// if (votingAge >= 18){
+//   console.log('true');
+//   return true;
+// } 
+
 
 
 
@@ -180,11 +181,11 @@ function rockPaperScissors(yourMove) {
     computerMove = scissors;
   }
   if(yourMove === computerMove){
-    return "it's a tie";
+    return "tie";
   } else if((yourMove === rock) && (computerMove === scissors) || ((yourMove === paper) && (computerMove === rock)) || ((yourMove === scissors) && (computerMove === paper))) {
-    return "you win!";
+    return "win";
   } else {
-    return "you lose!";
+    return "lose";
   }
 }
 
@@ -203,7 +204,7 @@ Using the miles function below do the following:
 //1 km = 0.6214 miles
 
 function miles(kilometers){
-    return kilometers * 0.6214;
+    return kilometers * 0.621371;
   }
 
 
@@ -234,9 +235,9 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+// function annoyingSong(/*add your code here*/){
+//         /*add your code here*/
+//   }
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -258,15 +259,15 @@ Using the grade function below do the following:
 let test = 92;
 function grade(score){
   if (score >= 90) {
-    return "A";
+    return "you got an A";
 } else if (score >= 80) {
-    return "B";
+    return "you got a B";
 } else if (score >= 70) {
-    return "C";
+    return "you got a C";
 } else if (score >= 60) {
-    return "D";
+    return "you got a D";
 } else {
-  return "F";
+  return "you got an F";
 }
 }  
 console.log(grade(92));
@@ -306,9 +307,9 @@ export default{
     multiply,
     dogYears,
     hungryDog,
-    game,
+    // game,
     miles,
     feet,
-    annoyingSong,
+    // annoyingSong,
     grade
 }
